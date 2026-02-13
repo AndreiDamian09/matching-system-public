@@ -1,5 +1,5 @@
 // const API = "http://localhost:8081/api";
-const API ="https://influence-achieving-warrant-validity.trycloudflare.com/"
+const API ="https://influence-achieving-warrant-validity.trycloudflare.com/api"
 
 async function loadDropdowns() {
   try {
