@@ -39,7 +39,6 @@ export default function MatchingPage() {
       setStatusText("CV încărcat. Poți face matching.");
     } catch (err) {
       console.error(err);
-      alert("Eroare upload: " + (err.message || "necunoscută"));
       setStatusText("Eroare la upload.");
     } finally {
       setLoading(false);
@@ -62,13 +61,11 @@ export default function MatchingPage() {
       };
 
       await apiPostJson("/jobs", jobData);
-      alert("Job adăugat cu succes!");
       await loadDropdowns();
       e.target.reset();
       setStatusText("Job adăugat. Poți face matching.");
     } catch (err) {
       console.error(err);
-      alert("Eroare: " + (err.message || "necunoscută"));
       setStatusText("Eroare la adăugarea jobului.");
     } finally {
       setLoading(false);
@@ -76,7 +73,6 @@ export default function MatchingPage() {
   }
 
   async function matchForCandidate() {
-    if (!candidateId) return alert("Selectează un candidat!");
     setLoading(true);
     setResults([]);
     setStatusText("Se calculează potrivirile…");
@@ -94,7 +90,6 @@ export default function MatchingPage() {
   }
 
   async function matchForJob() {
-    if (!jobId) return alert("Selectează un job!");
     setLoading(true);
     setResults([]);
     setStatusText("Se calculează potrivirile…");
