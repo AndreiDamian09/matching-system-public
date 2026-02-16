@@ -112,7 +112,7 @@ export default function MatchingPage() {
   }
 
   return (
-    <div>
+    <div className="matching-page">
       <h1>Job Matching</h1>
 
       <div className="grid">
@@ -147,7 +147,7 @@ export default function MatchingPage() {
 
           <div style={{ marginBottom: 20 }}>
             <label>Găsește Joburi pentru un Candidat:</label>
-            <div style={{ display: "flex", gap: 5 }}>
+            <div className="search-row">
               <select value={candidateId} onChange={(e) => setCandidateId(e.target.value)}>
                 <option value="" disabled>
                   {cvs.length ? "Selectează candidat..." : "Niciun CV în bază"}
@@ -166,7 +166,7 @@ export default function MatchingPage() {
 
           <div style={{ marginBottom: 20 }}>
             <label>Găsește Candidați pentru un Job:</label>
-            <div style={{ display: "flex", gap: 5 }}>
+            <div className="search-row">
               <select value={jobId} onChange={(e) => setJobId(e.target.value)}>
                 <option value="" disabled>
                   {jobs.length ? "Selectează job..." : "Niciun job în bază"}
@@ -198,7 +198,7 @@ export default function MatchingPage() {
                     const scorePct = ((item.score ?? 0) * 100).toFixed(1);
                     return (
                       <div className="result-item" key={idx}>
-                        <div style={{ display: "flex", justifyContent: "space-between" }}>
+                        <div className="result-row">
                           <strong>
                             {idx + 1}. {title}
                           </strong>

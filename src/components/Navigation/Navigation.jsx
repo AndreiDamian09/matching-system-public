@@ -19,14 +19,13 @@ export default function Navigation() {
       backgroundColor: "#f9f9f9",
       borderRadius: "10px 10px 10px 10px",
     }}>
-
-      <p style={{ padding: "8px 12px",
+  <img src="/src/assets/logo.svg" alt="CrowdConnect Logo" height="40" />
+      {/* <p style={{ padding: "8px 12px",
       borderRadius: "6px",
         fontSize: "20px",
         fontWeight: "bold",
         margin: "0"
-       }}>CrowdConnect</p>
-
+       }}>CrowdConnect</p> */}
       <NavLink to="/" style={linkStyle}>
         Home
       </NavLink>
