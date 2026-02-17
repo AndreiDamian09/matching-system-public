@@ -46,6 +46,14 @@ export default function Navigation() {
       <NavLink to="/matching" style={linkStyle}>
         Matching
       </NavLink>
+<div style={{ marginLeft: "auto" }} />
+            <NavLink to="/getstarted" style={linkStyle}>
+        Get Started
+      </NavLink>
+      <NavLink to="/register" style={linkStyle}>
+        Register
+      </NavLink>
+
 
     </nav>
   );

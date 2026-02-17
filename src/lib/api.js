@@ -19,6 +19,7 @@ async function parseResponse(res) {
 export async function apiGet(path) {
   const res = await fetch(`${BASE}${path}`, {
     method: "GET",
+    credentials: "include",
   });
   return parseResponse(res);
 }
@@ -27,6 +28,7 @@ export async function apiPostJson(path, body) {
   const res = await fetch(`${BASE}${path}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
     body: JSON.stringify(body),
   });
   return parseResponse(res);
@@ -35,6 +37,7 @@ export async function apiPostJson(path, body) {
 export async function apiPostForm(path, formData) {
   const res = await fetch(`${BASE}${path}`, {
     method: "POST",
+    credentials: "include",
     body: formData, // FormData => nu setăm Content-Type manual
   });
   return parseResponse(res);
@@ -45,6 +48,7 @@ export async function apiPutJson(path, body) {
   const res = await fetch(`${BASE}${path}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
     body: JSON.stringify(body),
   });
   return parseResponse(res);
@@ -53,6 +57,7 @@ export async function apiPutJson(path, body) {
 export async function apiDelete(path) {
   const res = await fetch(`${BASE}${path}`, {
     method: "DELETE",
+    credentials: "include",
   });
   return parseResponse(res);
 }
