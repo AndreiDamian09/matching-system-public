@@ -1,6 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
+
+//Navigation component with dynamic links based on authentication status and user role
+
 export default function Navigation() {
   const { user, isAuthenticated, logout, loading } = useAuth();
   const navigate = useNavigate();

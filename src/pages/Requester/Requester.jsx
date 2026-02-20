@@ -2,6 +2,8 @@ import { useEffect,useState } from "react";
 import {apiGet} from "../../lib/api";
 import RequesterCard from "../../components/RequesterCard/RequesterCard";
 
+//Page component for displaying requester information and list of top requesters
+
 function Requester()
 {
     const [requesters,setRequesters] = useState([]);

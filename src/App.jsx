@@ -13,6 +13,8 @@ import MatchingPage from "./pages/MatchingPage/MatchingPage";
 import LoginPage from "./pages/Login/LoginPage";
 import RegisterPage from "./pages/Register/RegisterPage";
 
+//Main application component that sets up routing and authentication context for the app
+
 export default function App() {
   return (
     <AuthProvider>

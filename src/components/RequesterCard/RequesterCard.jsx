@@ -1,5 +1,7 @@
 import "./styles.css";
 
+//Card component for displaying requester information in the list of matches
+
 export default function RequesterCard({ requester, score }) {
   return (
     <div className="contributor-card">

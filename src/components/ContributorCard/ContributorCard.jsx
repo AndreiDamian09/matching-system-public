@@ -1,5 +1,7 @@
 import "./styles.css";
 
+//Card component for displaying contributor information in the list of matches
+
 export default function ContributorCard({ contributor, score }) {
   return (
     <div className="contributor-card">

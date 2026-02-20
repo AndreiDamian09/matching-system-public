@@ -1,13 +1,14 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { authMe, authLogout } from "../lib/auth";
 
+//Context for managing authentication state and user information across the app
+
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Check if user is logged in on mount
   useEffect(() => {
     checkAuth();
   }, []);

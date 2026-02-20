@@ -4,6 +4,8 @@ import { authLogin } from "../../lib/auth";
 import { useAuth } from "../../context/AuthContext";
 import "./styles.css";
 
+//Page component for handling user login with form and authentication logic
+
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

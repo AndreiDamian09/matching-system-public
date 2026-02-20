@@ -4,6 +4,9 @@ import { authRegister } from "../../lib/auth";
 import { useAuth } from "../../context/AuthContext";
 import "./styles.css";
 
+
+//Page component for handling user registration with form and authentication logic
+
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

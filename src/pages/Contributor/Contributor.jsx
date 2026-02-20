@@ -2,6 +2,8 @@ import { useEffect,useState } from "react";
 import {apiGet} from "../../lib/api";
 import ContributorCard from "../../components/ContributorCard/ContributorCard";
 
+//Page component for displaying contributor information and list of top contributors
+
 function Contributor() {
 
     const [contributors, setGetContributors] = useState([]);

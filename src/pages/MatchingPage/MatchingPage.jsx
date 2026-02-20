@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { apiGet, apiPostForm, apiPostJson } from "../../lib/api";
 import "./styles.css";
 
+//Page component for handling job matching functionality, including CV upload, job addition, and displaying match results
+
 export default function MatchingPage() {
   const [cvs, setCvs] = useState([]);
   const [jobs, setJobs] = useState([]);

@@ -1,11 +1,12 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
+//Auth guard for protecting routes based on authentication and roles
+
 export default function AuthGuard({ children, requireRole }) {
   const { user, loading, isAuthenticated } = useAuth();
   const location = useLocation();
 
-  // Show nothing while checking auth
   if (loading) {
     return (
       <div style={{
@@ -20,12 +21,10 @@ export default function AuthGuard({ children, requireRole }) {
     );
   }
 
-  // Redirect to login if not authenticated
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  // Check role if required
   if (requireRole && user.role !== requireRole) {
     return (
       <div style={{
@@ -47,7 +46,6 @@ export default function AuthGuard({ children, requireRole }) {
   return children;
 }
 
-// Optional: Guest guard (for login/register pages - redirect if already logged in)
 export function GuestGuard({ children }) {
   const { isAuthenticated, loading } = useAuth();
   const location = useLocation();
@@ -66,7 +64,6 @@ export function GuestGuard({ children }) {
     );
   }
 
-  // Redirect to home if already authenticated
   if (isAuthenticated) {
     const from = location.state?.from?.pathname || "/";
     return <Navigate to={from} replace />;
